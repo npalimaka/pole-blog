@@ -1,0 +1,143 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 60% 40% 35px;
+    grid-template-areas: "hd" "main" "sd" "ft";
+    font-family: Jazz LET, fantasy;
+}
+h1{
+    color: #FFFFFF;
+    text-align: center;
+ }
+a{
+    color: #000000;
+    text-decoration: none;
+}
+.nav-link:hover{
+    text-decoration: underline;
+}
+#header{
+    grid-area: hd;
+    background-color: #009A9A;
+}
+#navbar{
+    margin: 5px 25px;
+    grid-area: sd;
+}
+#content{
+    grid-area: main;
+    margin: 25px 15px;
+}
+#footer{
+    grid-area: ft;
+}
+.post{
+    margin: 25px 8px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 50px 1fr 16px;
+    grid-template-areas: "img" "title" "txt" "date";
+}
+h2{
+    font-family: Georgia, sans-serif;
+}
+.post-hd{
+    grid-area: title;
+}
+.post-text{
+    grid-area: txt;
+    font-family: Georgia, sans-serif;
+}
+.post-ft{
+    grid-area: date;
+    display: flex;
+    justify-content: space-between;
+}
+.post-img{
+    grid-area: img;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#first{
+    background-image: url("../assets/pole-stand.jpg");
+}
+#second{
+    background-image: url("../assets/pole_shoes.jpg");
+}
+#third{
+    background-image: url("../assets/pole-sit.jpg");
+}
+#fourth{
+    background-image: url("../assets/exotic.jpg");
+}
+
+
+.subscribe{
+    height: 34px;
+    color: #009A9A;
+    background-color: #FFFFFF;
+    font-family: Georgia, sans-serif;
+    font-size: 16px;
+}
+.subscribe:hover{
+    color: #FFFFFF;
+    background-color: #009A9A;
+    cursor: pointer;
+}
+
+.rate-btn{
+    border: none;
+    background-color: white;
+}
+.rate-btn:hover span{
+    color: #FFC107;
+}
+
+@media(min-width: 900px) {
+    .container{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 100px 1fr 50px;
+        grid-template-areas: "hd hd" "sd main" "sd main" "ft ft";
+    }
+    #navbar{
+        margin-top: 5px;
+        grid-area: sd;
+        text-align: center;
+        border-right: solid 1px black;
+    }
+    /*#content{*/
+    /*    height: 780px;*/
+    /*}*/
+}
+@media(min-width: 500px) and (max-width: 979px) {
+    .post{
+        display: grid;
+        grid-template-columns: 200px 1fr 120px;
+        grid-template-rows: 50px 1fr 16px;
+        grid-template-areas: "title title img" "txt txt img" "date date img";
+    }
+    .post-img{
+        background-position: center;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+@media(min-width: 980px) {
+    #content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .post{
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 150px 50px 1fr 16px;
+        grid-template-areas: "img" "title" "txt" "date";
+    }
+    h2{
+        font-size: 30px;
+    }
+}
