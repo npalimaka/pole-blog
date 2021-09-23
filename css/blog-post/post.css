@@ -1,3 +1,5 @@
+@import "social-sharing.css";
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,7 +14,7 @@
 }
 
 h1 {
-    color: #FFFFFF;
+    color: #FFF;
     text-align: center;
     font-size: 25px;
 }
@@ -24,7 +26,7 @@ h1 {
 
 #navbar a {
     margin: 8px;
-    color: #000000;
+    color: #000;
     font-size: 18px;
     text-decoration: none;
 }
@@ -88,44 +90,15 @@ h3 {
     font-size: 12px;
 }
 
-.fa {
-    padding: 8px;
-    font-size: 18px;
-    width: 18px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007BB5;
-    color: white;
-}
-
 @media (min-width: 900px) {
-    #content{
+    #content {
         display: grid;
         grid-template-columns: 1fr 700px 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: ". txt .";
     }
 
-    .post-text{
+    .post-text {
         grid-area: txt;
     }
 }

@@ -1,0 +1,56 @@
+.post {
+    margin: 25px 8px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 50px 1fr 16px;
+    grid-template-areas: "img" "title" "txt" "date";
+}
+
+.post-hd {
+    grid-area: title;
+}
+
+.post-text {
+    grid-area: txt;
+    font-family: Georgia, sans-serif;
+}
+
+.post-ft {
+    grid-area: date;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-img {
+    grid-area: img;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.post h2 {
+    font-family: Georgia, sans-serif;
+}
+
+.fav-btn {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+}
+
+.fav-btn:hover {
+    color: #FBA400;
+}
+
+@media(min-width: 500px) {
+    .post{
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 150px 50px 1fr 16px;
+        grid-template-areas: "img" "title" "txt" "date";
+    }
+
+    .post h2{
+        font-size: 30px;
+    }
+}

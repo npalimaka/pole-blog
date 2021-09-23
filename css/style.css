@@ -1,93 +1,19 @@
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 650px 35px;
-    grid-template-areas: "hd" "main" "sd" "ft";
-    font-family: Jazz LET, fantasy;
-}
+@import "layout.css";
+@import "post-card.css";
+@import "images.css";
 
 h1 {
-    color: #FFFFFF;
+    color: #FFF;
     text-align: center;
 }
 
 a {
-    color: #000000;
+    color: #000;
     text-decoration: none;
 }
 
 .nav-link:hover {
     text-decoration: underline;
-}
-
-#header {
-    grid-area: hd;
-    background-color: #009A9A;
-}
-
-#navbar {
-    margin: 5px 25px;
-    grid-area: sd;
-    text-align: center;
-}
-
-#content {
-    grid-area: main;
-    margin: 25px 15px;
-}
-
-#footer {
-    grid-area: ft;
-}
-
-.post {
-    margin: 25px 8px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 150px 50px 1fr 16px;
-    grid-template-areas: "img" "title" "txt" "date";
-}
-
-.post h2 {
-    font-family: Georgia, sans-serif;
-}
-
-.post-hd {
-    grid-area: title;
-}
-
-.post-text {
-    grid-area: txt;
-    font-family: Georgia, sans-serif;
-}
-
-.post-ft {
-    grid-area: date;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post-img {
-    grid-area: img;
-    height: 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#first {
-    background-image: url("../assets/pole-stand.jpg");
-}
-
-#second {
-    background-image: url("../assets/pole_shoes.jpg");
-}
-
-#third {
-    background-image: url("../assets/pole-sit.jpg");
-}
-
-#fourth {
-    background-image: url("../assets/exotic.jpg");
 }
 
 .sub-form {
@@ -102,67 +28,25 @@ input[type=text] {
     padding: 12px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #CCC;
     box-sizing: border-box;
 }
 
-.subscribe {
+input:focus-visible {
+    outline: #00A5A5 solid 2px;
+}
+
+.sub-btn {
+    margin-top: 8px;
     height: 34px;
     color: #006161;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     font-family: Georgia, sans-serif;
     font-size: 16px;
 }
 
-.subscribe:hover {
-    color: #FFFFFF;
+.sub-btn:hover {
+    color: #FFF;
     background-color: #009A9A;
     cursor: pointer;
-}
-
-.fav-btn {
-    border: none;
-    background-color: white;
-    font-size: 18px;
-}
-
-.fav-btn:hover {
-    color: #FBA400;
-}
-
-@media(min-width: 1030px) {
-    .container{
-        display: grid;
-        height: 98vh;
-        grid-template-columns: 240px 1fr;
-        grid-template-rows: 100px 1fr 50px;
-        grid-template-areas: "hd hd" "sd main" "sd main" "ft ft";
-    }
-
-    #navbar{
-        margin-top: 5px;
-        padding-right: 20px;
-        grid-area: sd;
-        text-align: center;
-        border-right: solid 1px black;
-    }
-}
-
-@media(min-width: 500px) {
-    #content{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .post{
-        display: grid;
-        grid-template-columns: 350px;
-        grid-template-rows: 150px 50px 1fr 16px;
-        grid-template-areas: "img" "title" "txt" "date";
-    }
-
-    .post h2{
-        font-size: 30px;
-    }
 }
