@@ -10,11 +10,11 @@
 
 #header {
     grid-area: hd;
-    background-color: #009A9A;
+    background-color: #009a9a;
 }
 
 h1 {
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-size: 25px;
 }
